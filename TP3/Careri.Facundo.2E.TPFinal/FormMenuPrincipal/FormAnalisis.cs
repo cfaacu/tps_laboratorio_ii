@@ -1,20 +1,15 @@
 ﻿using Entidades;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Formularios
 {
     public partial class FormAnalisis : Form
     {
-        List<Empleado> listAux;
+        List<Empleado> listAux= new List<Empleado>();
         Serializadora<List<Empleado>> serJson = new Serializadora<List<Empleado>>(ETipo.JSON);
         Serializadora<List<Empleado>> serXml = new Serializadora<List<Empleado>>(ETipo.XML);
         ArchivoTexto txt = new ArchivoTexto();
@@ -31,6 +26,7 @@ namespace Formularios
         {
             try
             {
+                listAux.AddRange(Datos.listaEmpleados);
                 LlenarDataGridView(Datos.listaEmpleados);
             }
             catch (ListVaciaException ex)
@@ -42,14 +38,14 @@ namespace Formularios
 
         private void lstFiltrado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lstFiltrado.SelectedIndex == 0)
+            if (lstFiltrado.SelectedIndex == 0)
             {
                 this.lblFiltrar.Visible = false;
                 this.lstOpciones.Visible = false;
                 this.lblMayorA.Visible = true;
                 this.txtMayorA.Visible = true;
             }
-            else if(lstFiltrado.SelectedIndex == 1)
+            else if (lstFiltrado.SelectedIndex == 1)
             {
                 this.lblFiltrar.Visible = true;
                 this.lblMayorA.Visible = false;
@@ -58,7 +54,7 @@ namespace Formularios
                 this.lstOpciones.Items.Clear();
                 this.lstOpciones.Items.AddRange(Enum.GetNames(typeof(ESexo)));
             }
-            else if(lstFiltrado.SelectedIndex == 2)
+            else if (lstFiltrado.SelectedIndex == 2)
             {
                 this.lblFiltrar.Visible = true;
                 this.lblMayorA.Visible = false;
@@ -67,7 +63,7 @@ namespace Formularios
                 this.lstOpciones.Items.Clear();
                 this.lstOpciones.Items.AddRange(Enum.GetNames(typeof(ENacionalidad)));
             }
-            else if(lstFiltrado.SelectedIndex == 3)
+            else if (lstFiltrado.SelectedIndex == 3)
             {
                 this.lblFiltrar.Visible = true;
                 this.lblMayorA.Visible = false;
@@ -92,7 +88,7 @@ namespace Formularios
                 this.lblMayorA.Visible = true;
                 this.txtMayorA.Visible = true;
             }
-            else if(lstFiltrado.SelectedIndex == 6)
+            else if (lstFiltrado.SelectedIndex == 6)
             {
                 this.lblFiltrar.Visible = false;
                 this.lstOpciones.Visible = false;
@@ -105,7 +101,7 @@ namespace Formularios
         {
             if (lstFiltrado.SelectedIndex == 0)
             {
-                if(int.TryParse(this.txtMayorA.Text, out int edad))
+                if (int.TryParse(this.txtMayorA.Text, out int edad))
                 {
                     listAux = Datos.CalcularEdadMayorA(edad);
                     try
@@ -215,7 +211,7 @@ namespace Formularios
                     this.lblError.Text = ex.Message;
                 }
             }
-            else if(lstFiltrado.SelectedIndex == 7)
+            else if (lstFiltrado.SelectedIndex == 7)
             {
                 try
                 {
@@ -266,7 +262,7 @@ namespace Formularios
                 serXml.Escribir(listAux, pathXml);
                 MessageBox.Show("Archivo XML generado con exito");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 this.lblError.Visible = true;
                 this.lblError.Text = ex.Message;
@@ -294,6 +290,10 @@ namespace Formularios
             try
             {
                 pathTxt = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Filter.txt");
+                if (listAux is null)
+                {
+                    listAux.AddRange(Datos.listaEmpleados);
+                }
 
                 foreach (Empleado item in listAux)
                 {
@@ -311,7 +311,7 @@ namespace Formularios
                 txt.Escribir(strBuilder.ToString(), pathTxt);
                 MessageBox.Show("Archivo TXT generado con exito");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 this.lblError.Visible = true;
                 this.lblError.Text = ex.Message;
