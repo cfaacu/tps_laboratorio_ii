@@ -72,6 +72,12 @@ namespace FormMenuPrincipal
 
         private void botonPersonalizado1_Click(object sender, EventArgs e)
         {
+            FormFiltros frmFiltros = new FormFiltros();
+            frmFiltros.ShowDialog();
+        }
+
+        private void btnAnalisis_Click(object sender, EventArgs e)
+        {
             FormAnalisis frmAnalisis = new FormAnalisis();
             frmAnalisis.ShowDialog();
         }

@@ -22,3 +22,4 @@ C:\Users\facu\source\repos\Careri.Facundo.2E.TPFinal\FormMenuPrincipal\bin\Debug
 C:\Users\facu\source\repos\Careri.Facundo.2E.TPFinal\FormMenuPrincipal\bin\Debug\net5.0-windows\Entidades.pdb
 C:\Users\facu\source\repos\Careri.Facundo.2E.TPFinal\FormMenuPrincipal\obj\Debug\net5.0-windows\Formularios.csproj.CopyComplete
 C:\Users\facu\source\repos\Careri.Facundo.2E.TPFinal\FormMenuPrincipal\obj\Debug\net5.0-windows\Formularios.FormAnalisis.resources
+C:\Users\facu\source\repos\Careri.Facundo.2E.TPFinal\FormMenuPrincipal\obj\Debug\net5.0-windows\Formularios.FormFiltros.resources
