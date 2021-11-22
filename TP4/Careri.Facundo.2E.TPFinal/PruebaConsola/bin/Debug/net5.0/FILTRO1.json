@@ -1,0 +1,123 @@
+[
+  {
+    "Puesto": 2,
+    "Sueldo": 45000,
+    "Activo": false,
+    "Nombre": "Roberto",
+    "Apellido": "Carlos",
+    "Sexo": 1,
+    "Edad": 65,
+    "Nacionalidad": 2,
+    "EstadoCivil": 0
+  },
+  {
+    "Puesto": 3,
+    "Sueldo": 65000,
+    "Activo": true,
+    "Nombre": "Carla",
+    "Apellido": "Sport",
+    "Sexo": 0,
+    "Edad": 48,
+    "Nacionalidad": 3,
+    "EstadoCivil": 3
+  },
+  {
+    "Puesto": 3,
+    "Sueldo": 42300,
+    "Activo": true,
+    "Nombre": "Camila",
+    "Apellido": "Amor",
+    "Sexo": 0,
+    "Edad": 53,
+    "Nacionalidad": 2,
+    "EstadoCivil": 1
+  },
+  {
+    "Puesto": 0,
+    "Sueldo": 29600,
+    "Activo": false,
+    "Nombre": "Marwa",
+    "Apellido": "Manrique",
+    "Sexo": 0,
+    "Edad": 69,
+    "Nacionalidad": 4,
+    "EstadoCivil": 0
+  },
+  {
+    "Puesto": 1,
+    "Sueldo": 23450,
+    "Activo": true,
+    "Nombre": "Rodolfo",
+    "Apellido": "Aguado",
+    "Sexo": 2,
+    "Edad": 67,
+    "Nacionalidad": 1,
+    "EstadoCivil": 1
+  },
+  {
+    "Puesto": 0,
+    "Sueldo": 36460,
+    "Activo": true,
+    "Nombre": "Uxuea",
+    "Apellido": "Mesa",
+    "Sexo": 2,
+    "Edad": 51,
+    "Nacionalidad": 0,
+    "EstadoCivil": 2
+  },
+  {
+    "Puesto": 3,
+    "Sueldo": 87800,
+    "Activo": true,
+    "Nombre": "Arnau",
+    "Apellido": "Betancor",
+    "Sexo": 1,
+    "Edad": 55,
+    "Nacionalidad": 0,
+    "EstadoCivil": 3
+  },
+  {
+    "Puesto": 2,
+    "Sueldo": 21600,
+    "Activo": true,
+    "Nombre": "Nina",
+    "Apellido": "Elvira",
+    "Sexo": 0,
+    "Edad": 48,
+    "Nacionalidad": 0,
+    "EstadoCivil": 0
+  },
+  {
+    "Puesto": 3,
+    "Sueldo": 24000,
+    "Activo": true,
+    "Nombre": "Fernando",
+    "Apellido": "Bolsa",
+    "Sexo": 1,
+    "Edad": 50,
+    "Nacionalidad": 5,
+    "EstadoCivil": 2
+  },
+  {
+    "Puesto": 3,
+    "Sueldo": 50000,
+    "Activo": false,
+    "Nombre": "Sandra",
+    "Apellido": "Bulok",
+    "Sexo": 2,
+    "Edad": 47,
+    "Nacionalidad": 0,
+    "EstadoCivil": 1
+  },
+  {
+    "Puesto": 0,
+    "Sueldo": 15000,
+    "Activo": true,
+    "Nombre": "Pepe",
+    "Apellido": "Alonzo",
+    "Sexo": 1,
+    "Edad": 65,
+    "Nacionalidad": 1,
+    "EstadoCivil": 0
+  }
+]
